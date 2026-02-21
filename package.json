@@ -1,0 +1,375 @@
+{
+  "name": "neo2",
+  "author": "prayerie",
+  "version": "1.0.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "dependencies": {
+    "clay": "^2.22.3",
+    "pebble-clay": "^1.0.4"
+  },
+  "pebble": {
+    "displayName": "Neo2",
+    "uuid": "2f66276c-5beb-4f40-9df8-c93d6fd43a05",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+        "basalt", 
+        "diorite", 
+        "aplite"
+    ], 
+    "watchapp": {
+      "watchface": true
+    },
+    "capabilities": [
+      "location",
+      "configurable"
+    ],
+    "messageKeys": [
+      "TEMPERATURE",
+      "CONDITIONS",
+      "CONDITIONS_DESC",
+      "colourScheme",
+      "fahrenheit",
+      "hideDotw",
+      "japanese",
+      "hideTemp",
+      "customKey",
+      "customLoc",
+      "secret",
+      "bwBgColor"
+    ],
+    "resources": {
+        "media": [
+            {
+                "menuIcon": true, 
+                "type": "png", 
+                "name": "IMAGE_MENU_ICON", 
+                "file": "images/icon.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_AM", 
+                "file": "images/am.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_THREE_WORLDS", 
+                "file": "images/worlds.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BW_WORLD", 
+                "file": "images/world.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_NET_ON", 
+                "file": "images/conn_yes.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_NET_OFF", 
+                "file": "images/conn_no.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_PM", 
+                "file": "images/pm.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_SUN", 
+                "file": "images/sun.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_SUNCLOUD", 
+                "file": "images/suncloud.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_CLOUD", 
+                "file": "images/cloud.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_RAIN", 
+                "file": "images/rain.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_SNOW", 
+                "file": "images/snow.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_LIGHTNING", 
+                "file": "images/lightning.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_TEMPC", 
+                "file": "images/tempc.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_TEMPF", 
+                "file": "images/tempf.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BACKGROUND1", 
+                "file": "images/bg1.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_SPRITESHEET1", 
+                "file": "images/spritesheet.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON1", 
+                "file": "images/moon1.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON2", 
+                "file": "images/moon2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON3", 
+                "file": "images/moon3.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON4", 
+                "file": "images/moon4.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT0", 
+                "file": "images/battwarn.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT1", 
+                "file": "images/batt1.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT2", 
+                "file": "images/batt2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT3", 
+                "file": "images/batt3.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT4", 
+                "file": "images/batt4.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT5", 
+                "file": "images/batt5.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT6", 
+                "file": "images/batt6.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT7", 
+                "file": "images/batt7.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT8", 
+                "file": "images/batt8.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_AM2", 
+                "file": "images/am2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_THREE_WORLDS2", 
+                "file": "images/worlds2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_NET_ON2", 
+                "file": "images/conn_yes2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_NET_OFF2", 
+                "file": "images/conn_no2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_PM2", 
+                "file": "images/pm2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_SUN2", 
+                "file": "images/sun2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_SUNCLOUD2", 
+                "file": "images/suncloud2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_CLOUD2", 
+                "file": "images/cloud2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_RAIN2", 
+                "file": "images/rain2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_SNOW2", 
+                "file": "images/snow2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_LIGHTNING2", 
+                "file": "images/lightning2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_TEMPC2", 
+                "file": "images/tempc2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_TEMPF2", 
+                "file": "images/tempf2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BACKGROUND2", 
+                "file": "images/bg2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON12", 
+                "file": "images/moon12.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON22", 
+                "file": "images/moon22.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON32", 
+                "file": "images/moon32.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_MOON42", 
+                "file": "images/moon42.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT02", 
+                "file": "images/battwarn2.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT12", 
+                "file": "images/batt12.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT22", 
+                "file": "images/batt22.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT32", 
+                "file": "images/batt32.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT42", 
+                "file": "images/batt42.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT52", 
+                "file": "images/batt52.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT62", 
+                "file": "images/batt62.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT72", 
+                "file": "images/batt72.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BAT82", 
+                "file": "images/batt82.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_WARN", 
+                "file": "images/lines_bad.png"
+            }, 
+            {
+                "type": "bitmap", 
+                "name": "IMAGE_BACKGROUND3", 
+                "file": "images/bg3.png"
+            }, 
+            {
+                "characterRegex": "[0-9/ ]", 
+                "type": "font", 
+                "name": "NOTO_14", 
+                "file": "fonts/noto.ttf"
+            }, 
+            {
+                "characterRegex": "[0-9]", 
+                "type": "font", 
+                "name": "DSEG_33", 
+                "file": "fonts/dseg3.ttf"
+            }, 
+            {
+                "characterRegex": "[FMSTWADEHINORTU電池]", 
+                "type": "font", 
+                "name": "DSEG_14", 
+                "file": "fonts/dseg3.ttf"
+            }, 
+            {
+                "characterRegex": "[0-9 \\?\\-]", 
+                "type": "font", 
+                "name": "FIVEXNINE_16", 
+                "file": "fonts/fivenine.ttf"
+            }, 
+            {
+                "characterRegex": "[A-Za-z'! ]", 
+                "type": "font", 
+                "name": "HELV_10", 
+                "file": "fonts/FSEX302.ttf", 
+                "compatibility": "2.7"
+            }
+        ]
+    }
+  }
+}
