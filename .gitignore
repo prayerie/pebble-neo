@@ -2,3 +2,7 @@ build/
 node_modules/
 .lock-*
 package-lock.json
+.vscode/
+Makefile.1
+tools/
+extras/

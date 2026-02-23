@@ -19,18 +19,19 @@ function weatherFromLoc(loc) {
   // Construct URL
   var customKey = localStorage.getItem("customKey");
   if (customKey) {
-    console.log("USING CUSTOM API KEY!");
+    console.log("USING CUSTOM API KEY!" + customKey);
     API_KEY = customKey;
   }
   var url = "http://api.openweathermap.org/data/2.5/weather?q=" +
       loc + '&appid=' + API_KEY;
 
+  console.log("REQUEST: \n\n" + url + "\n\n");
   // Send request to OpenWeatherMap
   xhrRequest(url, 'GET', 
     function(responseText) {
       // responseText contains a JSON object with weather info
       var json = JSON.parse(responseText);
-
+      console.log(responseText);
       var temperature = Math.round((json.main.temp - 273.15) * 10);
       var conditions = json.weather[0].main;
       var conditions_description = json.weather[0].description;
@@ -149,9 +150,9 @@ Pebble.addEventListener('webviewclosed', function(e) {
   for (var key in dict) {
     console.log("CONFIG ITEM " + key + ": " + dict[key]);
   }
-  localStorage.setItem("fahrenheit", dict[10003]);
-  localStorage.setItem("customLoc", dict[10006]);
-  localStorage.setItem("customKey", dict[10007]);
+  localStorage.setItem("fahrenheit", dict[10004]);
+  localStorage.setItem("customLoc", dict[10009]);
+  localStorage.setItem("customKey", dict[10008]);
   localStorage.setItem("colourScheme", dict[10002]);
   localStorage.setItem("secret", dict[10009]);
   localStorage.setItem("bwBgColor", dict[10010]);

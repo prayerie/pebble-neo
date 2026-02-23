@@ -26,8 +26,8 @@
 //! @return The length of the array.
 #define ARRAY_LENGTH(array) (sizeof((array))/sizeof((array)[0]))
 
-struct tm;
-typedef struct tm tm;
+// struct tm;
+// typedef struct tm tm;
 
 //! Determine whether a variable is signed or not.
 //! @param var The variable to evaluate.
@@ -7873,20 +7873,20 @@ void light_enable(bool enable);
 
 //! structure containing broken-down time for expressing calendar time
 //! (ie. Year, Month, Day of Month, Hour of Day) and timezone information
-struct tm {
-  int tm_sec;     /*!< Seconds. [0-60] (1 leap second) */
-  int tm_min;     /*!< Minutes. [0-59] */
-  int tm_hour;    /*!< Hours.  [0-23] */
-  int tm_mday;    /*!< Day. [1-31] */
-  int tm_mon;     /*!< Month. [0-11] */
-  int tm_year;    /*!< Years since 1900 */
-  int tm_wday;    /*!< Day of week. [0-6] */
-  int tm_yday;    /*!< Days in year.[0-365] */
-  int tm_isdst;   /*!< DST. [-1/0/1] */
+// struct tm {
+//   int tm_sec;     /*!< Seconds. [0-60] (1 leap second) */
+//   int tm_min;     /*!< Minutes. [0-59] */
+//   int tm_hour;    /*!< Hours.  [0-23] */
+//   int tm_mday;    /*!< Day. [1-31] */
+//   int tm_mon;     /*!< Month. [0-11] */
+//   int tm_year;    /*!< Years since 1900 */
+//   int tm_wday;    /*!< Day of week. [0-6] */
+//   int tm_yday;    /*!< Days in year.[0-365] */
+//   int tm_isdst;   /*!< DST. [-1/0/1] */
 
-  int tm_gmtoff;  /*!< Seconds east of UTC */
-  char tm_zone[TZ_LEN]; /*!< Timezone abbreviation */
-};
+//   int tm_gmtoff;  /*!< Seconds east of UTC */
+//   char tm_zone[TZ_LEN]; /*!< Timezone abbreviation */
+// };
 
 //! Format the time value at tm according to fmt and place the result in a buffer s of size max
 //! @param s A preallocation char array of size max
